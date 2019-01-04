@@ -8,9 +8,11 @@ import {
   Image,
   Alert
 } from "react-native";
+
+//import { DrawerNavigator } from 'react-navigation'
 const numColumns = 2;
 import { PininterestComponent } from "./src/Component/PininterestComponent";
-import { CommonHeader } from "./src/Component/CommonHeader";
+import  {CommonHeader}  from "./src/Component/CommonHeader";
 import { CommonHeaderWithTextInput } from "./src/Component/CommonHeaderWithTextInput";
 
 export default class SearchScreen extends Component {
@@ -81,7 +83,7 @@ export default class SearchScreen extends Component {
         />
       );
     } else {
-      return <CommonHeader action={this.handler} />;
+      return <CommonHeader action={this.handler} navigation={this.props.navigation}/>;
     }
   }
   handler=()=> {
@@ -110,4 +112,6 @@ export default class SearchScreen extends Component {
       });
     }
   };
+  
 }
+
